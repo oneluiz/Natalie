@@ -1,0 +1,21 @@
+<app-navbar *ngIf="session == 1 || session == 2"></app-navbar>
+<div id="layoutSidenav"  *ngIf="session == 1">
+    <app-sidebar *ngIf="session == 1"></app-sidebar>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid">
+                <router-outlet></router-outlet>
+            </div>
+        </main>
+        <app-footer></app-footer>
+    </div>
+</div>
+
+<main *ngIf="session == 2"  class="pt-5">
+    <div class="container px-4 mt-5">
+        <router-outlet></router-outlet>
+    </div>
+</main>
+<div *ngIf="session == null">
+    <router-outlet *ngIf="location == '/usuario/iniciar-sesion'"></router-outlet>
+</div>

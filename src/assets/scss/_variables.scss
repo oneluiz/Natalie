@@ -1,0 +1,97 @@
+$body-bg: #F0F2F5;
+
+$primary: #5F3B1C;
+$secondary: #DDC4A7;
+$secondary-light: #efe3d3;
+$tertiary: #558E99;
+$success: #4caf50;
+$info: #0352A5;
+$warning: #ffc107;
+$danger: #DE0405;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// scss-docs-start gray-color-variables
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+// scss-docs-end gray-color-variables
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "secondary-light": $secondary-light,
+    "tertiary":   $tertiary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+);
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+) !default;
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+$font-sizes: (
+    "xs": 0.75rem,
+    "sm": 0.875rem,
+    "base": 1rem,
+    "lg": 1.125rem,
+    "xl": 1.25rem,
+    "2xl": 1.5rem,
+    "3xl": 1.875rem,
+    "4xl": 2.25rem,
+    "5xl": 3rem,
+    "6xl": 4rem
+);
+
+$sidebar-width: 15rem;
+$logo-width: 10.5rem;
+$navbar-width: 15rem;
+
+// Forms Colors and Variables
+$input-border-color: $body-bg !default;
+$input-focus-border-color: transparent !default;
+
+// Dropdowns
+$dropdown-link-active-bg: $secondary-light !default;
+$dropdown-link-active-color: $primary !default;
+
+
+$nav-link-hover-color: $primary !default;
+
+
+// Tables
+$table-tbody-border-top: none !default; // border-top: 2px solid currentColor;
+
+//Card
+$card-border-color:                 none !default;
+$card-border-radius:                1rem !default;
+$card-box-shadow:                   null;
+
+// Nav tabs
+$nav-tabs-border-color:             $secondary !default;
+$nav-tabs-link-hover-border-color:  $secondary transparent transparent !default;
+$nav-tabs-link-active-border-color: $secondary transparent transparent !default;

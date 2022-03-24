@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Raleway Regular';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+@font-face {
+    font-family: 'Raleway Black';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+@font-face {
+    font-family: 'Raleway Bold';
+    src: url('../fonts/Raleway-Bold.ttf');
+}
+@font-face {
+    font-family: 'Raleway SemiBold';
+    src: url('../fonts/Raleway-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'Raleway Light';
+    src: url('../fonts/Raleway-Light.ttf');
+}
+@font-face {
+    font-family: 'Raleway Thin';
+    src: url('../fonts/Raleway-Thin.ttf');
+}
+@font-face {
+    font-family: 'Raleway ExtraLight';
+    src: url('../fonts/Raleway-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'Raleway ExtraBold';
+    src: url('../fonts/Raleway-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Raleway ExtraLightItalic';
+    src: url('../fonts/Raleway-ExtraLightItalic.ttf');
+}
+@font-face {
+    font-family: 'Raleway LightItalic';
+    src: url('../fonts/Raleway-LightItalic.ttf');
+}
+@font-face {
+    font-family: 'Raleway Italic';
+    src: url('../fonts/Raleway-Italic.ttf');
+}
+@font-face {
+    font-family: 'Raleway Medium';
+    src: url('../fonts/Raleway-Medium.ttf');
+}
+@font-face {
+    font-family: 'Raleway MediumItalic';
+    src: url('../fonts/Raleway-MediumItalic.ttf');
+}
+@font-face {
+    font-family: 'Raleway SemiBoldItalic';
+    src: url('../fonts/Raleway-SemiBoldItalic.ttf');
+}
+@font-face {
+    font-family: 'Raleway BoldItalic';
+    src: url('../fonts/Raleway-BoldItalic.ttf');
+}
+@font-face {
+    font-family: 'Raleway BlackItalic';
+    src: url('../fonts/Raleway-BlackItalic.ttf');
+}
+@font-face {
+    font-family: 'Raleway ThinItalic';
+    src: url('../fonts/Raleway-ThinItalic.ttf');
+}
+@font-face {
+    font-family: 'Raleway ExtraBoldItalic';
+    src: url('../fonts/Raleway-ExtraBoldItalic.ttf');
+}
+
+body {
+    font-family: 'Raleway Regular', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+}
+
+@each $name, $font-size in $font-sizes {
+	.f-#{$name} {
+		font-size: $font-size;
+	}
+}
+
+.text-mayuscula p:first-letter {
+    text-transform: uppercase;
+}
+
+.text-mayuscula p:not(first-letter) {
+    text-transform: lowercase;
+}
+
+.lh-05 {
+    line-height: 0.5;
+}
+
+.check-list {
+    margin: 0;
+    padding-right: .5rem !important
+}
+
+.check-list li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 1.3rem !important;
+    margin-bottom: 0.5rem;
+}
+
+.check-list li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 5px;
+    height: 11px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: $primary;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+}
+  

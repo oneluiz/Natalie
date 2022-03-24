@@ -1,0 +1,114 @@
+
+<div class="row g-0"> 
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="asitencia-mes-tab" data-bs-toggle="tab" data-bs-target="#asitencia-mes" type="button" role="tab" aria-controls="asitencia-mes" aria-selected="true">Asistencia Mensual</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="ingresar-asistencia-tab" data-bs-toggle="tab" data-bs-target="#ingresar-asistencia" type="button" role="tab" aria-controls="ingresar-asistencia" aria-selected="false">Ingresar Asistencia</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="asitencia-mes" role="tabpanel" aria-labelledby="asitencia-mes-tab">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover bg-white">
+                    <thead>
+                        <tr>
+                            <th style="min-width:100%">Alumno</th>
+                            <ng-container  *ngFor="let item of diasMes;">
+                                <th class="bg-secondary text-primary" [ngClass]="{ 'bg-white': item.split('',1) == 'S' || item.split('',1) == 'D'}">{{ item }}</th>
+                            </ng-container>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let a of asistencia;">
+                            <td style="min-width:100%">{{a.nombre_alumno}}</td>
+                            <td *ngFor="let d of dias" data-bs-toggle="tooltip" data-bs-placement="top" [title]="
+                            (a[d] == 1 ) ?
+                                'Presente'
+                            : 
+                                (a[d] == 2 ) ?
+                                    'Ausente'
+                                : 
+                                    (a[d] == 3 ) ?
+                                        'Ausencia Motivada'
+                                    :
+                                        (a[d] == 4 ) ?
+                                            'Reunión'
+                                        :
+                                        
+                                            (a[d] == 5) ?
+                                                'Feriado'
+                                            :
+                                                'Sin Registro'
+                            " class="fw-bold">
+                            {{
+                                    (a[d] == 1 ) ?
+                                        'P'
+                                    : 
+                                        (a[d] == 2 ) ?
+                                            'A'
+                                        : 
+                                            (a[d] == 3 ) ?
+                                                'M'
+                                            :
+                                                (a[d] == 4 ) ?
+                                                    'R'
+                                                :
+                                                
+                                                    (a[d] == 5) ?
+                                                        'F'
+                                                    :
+                                                        '-'
+                                    }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            
+        <div class="tab-pane fade" id="ingresar-asistencia" role="tabpanel" aria-labelledby="ingresar-asistencia-tab">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover bg-white">
+                                    <thead>
+                                        <tr class="bg-secondary text-primary">
+                                            <th style="min-width:100%">Alumno</th>
+                                            <td>Asistencia</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of lista;">
+                                            <td style="min-width:100%">{{ item.nombre }}</td>
+                                            <td>
+                                                <form>
+                                                    <div
+                                                        class="form-check form-check-inline"
+                                                        *ngFor="let item_asistencia of tipo_asistencia">
+                                                        <input class="form-check-input"
+                                                        type="radio"
+                                                        name="_{{item.cedula}}"
+                                                        id="inlineRadio{{item_asistencia.id +'_'+item.cedula}}"
+                                                        [value]="item_asistencia.id"
+                                                        (click)="ingresarAsistencia(item.docente, $event ,item.id)"
+                                                        [checked]= "item.asistencia == item_asistencia.id">
+                                                        <label class="form-check-label" for="inlineRadio{{item_asistencia.id +'_'+item.cedula }}">{{ item_asistencia.tipo }}</label>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

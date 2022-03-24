@@ -1,0 +1,19 @@
+.nav-link:hover {
+    background: $body-bg;
+    border-radius: none;
+}
+
+.nav-link:active {
+    background: $secondary-light;
+    border-radius: 5px;
+}
+
+.logo {
+    width: $logo-width;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #495057;
+    background-color: #ffffff !important;
+    border-color: $secondary-light transparent transparent;
+}

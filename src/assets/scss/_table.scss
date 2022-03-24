@@ -1,0 +1,8 @@
+.table > :not(:first-child) {
+    border-top: $table-tbody-border-top;
+}
+
+tr:last-child {
+    border-color: transparent;
+}
+

@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/variables";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/simple-datatables/dist/style.css";
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+/* Importing Admin scss. */
+@import "./assets/scss/admin";
+
+ 
+@import "./assets/scss/fonts";
+
+/**
+ * @Buttons
+ * @desc Button components for the admin panel layout.
+ */
+ @import "./assets/scss/buttons";
+
+/**
+ * @Navbar
+ * @desc Navbar component and sidebar toggle component for the admin panel layout.
+ */
+@import "./assets/scss/nav";
+
+/**
+ * @Table
+ * @desc Table component for the admin panel layout.
+ */
+@import "./assets/scss/table";
+
+/**
+ * @Login
+ * @desc Login component for the admin panel layout.
+ */
+@import "./assets/scss/login";
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";

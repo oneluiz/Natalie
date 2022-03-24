@@ -1,0 +1,67 @@
+<div class="px-5 pt-5 d-flex flex-column justify-content-center mt-md-5 fixed-top">
+	<div class="d-flex justify-content-center">
+		<div class="col-12 col-md-9 col-lg-6 d-flex flex-column justify-content-center position-relative">
+			<div class="row">
+				<div class="col-lg-10 col-md-9 col-xl-7 mx-auto">
+					<div class="text-center mb-12">
+						<h3 class="display-5"><img src="assets/imagen/iconos/superhero.png" alt="Natalie" title="Natalie"></h3>
+						<h1 class="ls-tight fw-bold mt-6">¡Bienvenida de nuevo!</h1>
+						<p class="mt-2">¡Lista para construir algo grande!</p>
+					</div>
+					<form [formGroup]="comprobarDocente" (submit)="iniciarSesion()">
+						<div class="mb-2">
+                            <label class="form-label text-muted fw-bold" for="email">Número de Cédula</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text bg-secondary-light" id="basic-addon1"><i class="fa-solid fa-user text-primary"></i></span>
+                                <input
+                                type="text"
+                                class="form-control form-control-lg bg-white"
+                                placeholder="Escriba su número de cédula"
+                                formControlName="cedula"/>
+                            </div>
+                        </div>
+						<div class="mb-2">
+							<div class="d-flex align-items-center justify-content-between">
+								<div><label class="form-label text-muted fw-bold" for="password">PIN de Acceso</label></div>
+								<div class="mb-2">
+                                    <a href="#" class="text-sm text-muted fw-bold">¿Se te olvidó tu PIN?</a>
+                                </div>
+							</div>
+							<div class="input-group mb-3">
+                                <span class="input-group-text bg-secondary-light" id="basic-addon1">
+                                    <i class="fa-solid fa-key text-primary"></i>
+                                </span>
+                                <input
+                                type="password"
+                                class="form-control bg-white form-control-lg"
+                                id="password"
+                                placeholder="Escriba su PIN de Acceso"
+                                formControlName="pin"/>
+                            </div>
+						</div>
+						<div class="mb-2">
+							<div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="check_example" id="check-remind-me"/>
+                                <label class="form-check-label text-muted fw-bold" for="check-remind-me">Mantenme conectado</label>
+                            </div>
+						</div>
+						<div>
+                            <button type="submit" class="btn btn-secondary-light btn-lg w-100 fw-bold text-primary" [disabled]="!comprobarDocente.valid || !comprobarDocente.dirty">
+                                <i class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar Sesión
+                            </button>
+                        </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="p-4 bg-light mt-auto fixed-bottom">
+    <div class="container-fluid px-4">
+        <div class="align-items-center justify-content-between text-center">
+            <div class="text-muted">
+                Todos los derechos Reservados &copy; <img src="assets/imagen/iconos/superhero.png" alt="" width="24px" title="Natalie"> Natalie 2022 | Creado con el <i class="fa-solid fa-heart text-danger" title="Corazón"></i> y con mucha <img src="assets/imagen/iconos/beer.png" alt="" width="24px" title="cerveza"> 
+            </div>
+        </div>
+    </div>
+</footer>
